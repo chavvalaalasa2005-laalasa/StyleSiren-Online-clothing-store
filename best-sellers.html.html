@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Best Sellers - StyleSiren</title>
+
+  <style>
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 2px 2px 5px gray;
+    }
+
+    h2 {
+      text-transform: capitalize;
+    }
+
+    .product-name {
+      text-decoration: underline;
+      text-shadow: 2px 2px 4px gray;
+    }
+
+    p {
+      text-indent: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Visible box with margin */
+    .box {
+      border: 2px solid black;
+      margin: 20px;
+      padding: 15px;
+      display: inline-block;
+      vertical-align: top;
+      width: 220px;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Best Sellers</h1>
+  <p>Our most loved products chosen by customers.</p>
+
+  <!-- Button to load products dynamically -->
+  <div style="text-align:center;">
+    <button onclick="loadProducts()">Show Best Sellers</button>
+  </div>
+
+  <!-- Container for dynamic products -->
+  <div id="productContainer" style="text-align:center;"></div>
+
+  <!-- JavaScript for 4(a)(v) -->
+  <script>
+    function loadProducts() {
+      const products = [
+        {
+          name: "Classic White Tee",
+          price: "₹799",
+          category: "Men",
+          rating: "★★★★☆ (4.4)",
+          image: "https://tse1.mm.bing.net/th/id/OIP.cXajWn9KzHZihnhpp3ltBQHaHa?pid=Api&P=0&h=180",
+          link: "men.html"
+        },
+        {
+          name: "Draped Dress",
+          price: "₹2,799",
+          category: "Women",
+          rating: "★★★★☆ (4.6)",
+          image: "https://i.pinimg.com/736x/f4/30/2a/f4302a326f6776eaeb4fd946181656bd.jpg",
+          link: "women.html"
+        },
+        {
+          name: "Cartoon Print T-Shirt",
+          price: "₹399",
+          category: "Kids",
+          rating: "★★★★☆ (4.3)",
+          image: "https://tse3.mm.bing.net/th/id/OIP._LMPj1WqipNAcvpb2HLCtwHaHa?pid=Api&P=0&h=180",
+          link: "kids.html"
+        }
+      ];
+
+      const container = document.getElementById("productContainer");
+      container.innerHTML = ""; // clear previous content
+
+      products.forEach(product => {
+        const div = document.createElement("div");
+        div.className = "box";
+
+        div.innerHTML = `
+          <img src="${product.image}" width="200">
+          <h2 class="product-name">${product.name}</h2>
+          <p>Price: ${product.price}</p>
+          <p>Category: ${product.category}</p>
+          <p>Rating: ${product.rating}</p>
+          <a href="${product.link}">View Collection</a>
+        `;
+
+        container.appendChild(div);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>New Arrivals - StyleSiren</title>
+
+  <style>
+    body {
+      margin: 24px;
+      font-family: "Georgia", serif;
+      font-size: 16px;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      transition: color 0.3s;
+    }
+    h2:hover {
+      color: #ff4500; /* highlight on hover */
+      cursor: pointer;
+    }
+
+    p.subtitle {
+      font-style: italic;
+      font-weight: 400;
+      color: #444;
+      margin-top: 0;
+    }
+
+    img {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button:hover {
+      background-color: #ff4500;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>New Arrivals</h1>
+  <p class="subtitle">Fresh styles just dropped — discover what’s new</p>
+
+  <table cellpadding="10" cellspacing="0" border="0">
+
+    <!-- Item 1: Women (WITH DYNAMIC IMAGE) -->
+    <tr>
+      <td width="240">
+        <!-- Dynamic Image -->
+        <img id="newArrivalImg" width="220" height="220"
+        src="https://i.pinimg.com/originals/16/3e/60/163e6048a6051d2bb1d841286c563f5a.jpg">
+
+        <!-- Image Change Buttons -->
+        <div>
+          <button onclick="setArrivalStyle1()">Style 1</button>
+          <button onclick="setArrivalStyle2()">Style 2</button>
+        </div>
+      </td>
+      <td>
+        <h2>Women’s Silk Blouse</h2>
+        <p>Price: ₹1,899</p>
+        <p>Category: Women</p>
+        <p>Rating: ★★★★☆ (4.5)</p>
+        <a href="women.html">View Collection</a>
+      </td>
+    </tr>
+
+    <tr><td colspan="2"><hr></td></tr>
+
+    <!-- Item 2: Men (unchanged) -->
+    <tr>
+      <td>
+        <img class="product-img" width="220" height="220"
+        src="https://tse3.mm.bing.net/th/id/OIP.jdhyAmZ4fQJjecDj06Kd4QHaID?pid=Api&P=0&h=180">
+      </td>
+      <td>
+        <h2>Men’s Slim Fit Jacket</h2>
+        <p>Price: ₹2,299</p>
+        <p>Category: Men</p>
+        <p>Rating: ★★★★☆ (4.4)</p>
+        <a href="men.html">View Collection</a>
+      </td>
+    </tr>
+
+    <tr><td colspan="2"><hr></td></tr>
+
+    <!-- Item 3: Kids (unchanged) -->
+    <tr>
+      <td>
+        <img class="product-img" width="220" height="220"
+        src="https://i5.walmartimages.com/seo/Boys-Winter-Hooded-Tracksuit-Set-Warm-Bear-Ear-Sweatshirt-And-Pants-2Pcs-Outfits-For-Toddler-Kids-Cozy-Playwear_2148489c-eec9-413c-bd35-7582530d66e5.43be285fd7ed0dc4eac14a72e86f286b.jpeg">
+      </td>
+      <td>
+        <h2>Kids’ Playwear Set</h2>
+        <p>Price: ₹699</p>
+        <p>Category: Kids</p>
+        <p>Rating: ★★★★☆ (4.2)</p>
+        <a href="kids.html">View Collection</a>
+      </td>
+    </tr>
+
+  </table>
+
+  <!-- JavaScript for 4(a)(iv) + 4(b) -->
+  <script>
+    // 4(a)(iv) - Dynamic Image Change
+    function setArrivalStyle1() {
+      document.getElementById("newArrivalImg").src =
+        "https://i.pinimg.com/originals/16/3e/60/163e6048a6051d2bb1d841286c563f5a.jpg";
+    }
+
+    function setArrivalStyle2() {
+      document.getElementById("newArrivalImg").src =
+        "https://i.pinimg.com/originals/f4/76/56/f476569b3249ffc732f09fcaa3cc324f.jpg";
+    }
+
+    // 4(b) - Mouse Events for all product images
+    const productImgs = document.querySelectorAll('img');
+    productImgs.forEach(img => {
+      img.onmouseover = () => {
+        img.style.transform = 'scale(1.1)';
+        img.style.boxShadow = '0 10px 20px rgba(0,0,0,0.5)';
+        img.style.cursor = 'pointer';
+      };
+      img.onmouseout = () => {
+        img.style.transform = 'scale(1)';
+        img.style.boxShadow = 'none';
+      };
+    });
+  </script>
+
+</body>
+</html>

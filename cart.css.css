@@ -1,0 +1,68 @@
+cart {
+    display: block;
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5;
+    padding: 20px;
+}
+
+/* Page title */
+title {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0b1a7a;
+    margin-bottom: 20px;
+}
+
+/* Header section */
+header {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Cart heading */
+heading {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Empty cart message */
+message {
+    display: block;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* Categories section */
+categories {
+    display: block;
+    margin-bottom: 20px;
+}
+
+description {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Hide category links since they are not shown in screenshot */
+category {
+    display: none;
+}
+
+/* Actions section */
+actions {
+    display: block;
+}
+
+/* Button styling */
+button {
+    display: block;
+    background-color: #0b0b78;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+}

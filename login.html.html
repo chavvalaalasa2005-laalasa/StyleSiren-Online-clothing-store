@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sign In - StyleSiren</title>
+
+  <style>
+    /* FLOAT PROPERTY 1 */
+    .login-box {
+      float: left;
+      border: 1px solid #333;
+      padding: 15px;
+      margin: 20px;
+    }
+
+    /* FLOAT PROPERTY 2 */
+    .clear-box {
+      clear: both;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Sign In</h2>
+
+  <form action="#" method="post">
+    <table class="login-box" cellpadding="6" cellspacing="4" border="0">
+      <tr>
+        <td><label for="username">Username / Email:</label></td>
+        <td><input type="text" id="username" name="username" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password" required></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Sign In">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <!-- CLEAR FLOAT -->
+  <div class="clear-box">
+    <p>New user? <a href="register.html" target="rightFrame">Create an account</a></p>
+  </div>
+
+</body>
+</html>

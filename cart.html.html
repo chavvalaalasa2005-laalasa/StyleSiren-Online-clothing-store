@@ -1,0 +1,46 @@
+<!-- cart.html (With 4(a)(ii) - Dynamic Background Color) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cart - StyleSiren</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      transition: background-color 0.5s; /* smooth effect */
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Cart</h1>
+  <p>Your cart is currently empty.</p>
+
+  <p>
+    Browse categories to add items: 
+    <a href="men.html" target="rightFrame">Men</a> | 
+    <a href="women.html" target="rightFrame">Women</a> | 
+    <a href="kids.html" target="rightFrame">Kids</a> | 
+    <a href="accessories.html" target="rightFrame">Accessories</a>
+  </p>
+
+  <!-- 4(a)(ii) Button -->
+  <button onclick="highlightCheckout()">
+    Highlight Checkout
+  </button>
+
+  <!-- JavaScript for 4(a)(ii) -->
+  <script>
+    function highlightCheckout() {
+      document.body.style.backgroundColor = "#e6f7ff";
+    }
+  </script>
+
+</body>
+</html>
